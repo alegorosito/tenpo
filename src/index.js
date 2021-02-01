@@ -11,6 +11,7 @@ app.use(require('./routes/index'))
 
 app.listen(3000, () => {
     // Check if tables exists
+    console.log(process.env.DB_USER);
     migration();
 });
 
