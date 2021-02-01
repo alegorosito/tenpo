@@ -6,7 +6,8 @@
 		"fdefce96-a7dd-d16f-0fb1-1e723c6d2391",
 		"1f3101eb-1e6f-2e7a-3c99-85cfb03f7f40",
 		"58e5ba7d-3e4a-f2bb-f89c-a8c5e3752202",
-		"ea876295-1181-568e-b85c-fe423a09d17c"
+		"ea876295-1181-568e-b85c-fe423a09d17c",
+		"95855a5d-10d9-587a-887b-f95bc5dc5d56"
 	],
 	"folders": [],
 	"folders_order": [],
@@ -25,7 +26,7 @@
 					"enabled": true
 				}
 			],
-			"url": "http://52.183.89.38/user/signin",
+			"url": "http://52.175.219.25/user/signin",
 			"queryParams": [],
 			"preRequestScript": null,
 			"pathVariables": {},
@@ -36,7 +37,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1612161515956,
+			"time": 1612186077916,
 			"name": "Login User",
 			"description": "",
 			"collectionId": "34cb6b17-c49f-affe-5227-6165de859ec2",
@@ -45,7 +46,7 @@
 		},
 		{
 			"id": "58e5ba7d-3e4a-f2bb-f89c-a8c5e3752202",
-			"headers": "Content-Type: application/json\ntoken: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjEyMTYxNDU3LCJleHAiOjE2MTIxNjIzNTd9.JOfCPJWe9Ponsjr82OH9SpJKZ_nBPy5j8KHxAgrN3aY\n",
+			"headers": "Content-Type: application/json\ntoken: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjEyMTg1MDA1LCJleHAiOjE2MTIxODU5MDV9.EBOzzn_2pggIzxQm3sbR5kgtDjkBHB9xdvJZx-qnheI\n",
 			"headerData": [
 				{
 					"key": "Content-Type",
@@ -55,12 +56,12 @@
 				},
 				{
 					"key": "token",
-					"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjEyMTYxNDU3LCJleHAiOjE2MTIxNjIzNTd9.JOfCPJWe9Ponsjr82OH9SpJKZ_nBPy5j8KHxAgrN3aY",
+					"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjEyMTg1MDA1LCJleHAiOjE2MTIxODU5MDV9.EBOzzn_2pggIzxQm3sbR5kgtDjkBHB9xdvJZx-qnheI",
 					"description": "",
 					"enabled": true
 				}
 			],
-			"url": "http://52.183.89.38/adding",
+			"url": "http://52.175.219.25/adding",
 			"queryParams": [],
 			"preRequestScript": null,
 			"pathVariables": {},
@@ -71,7 +72,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1612161562128,
+			"time": 1612186080246,
 			"name": "Adding 2 numbers",
 			"description": "Suma de dos números",
 			"collectionId": "34cb6b17-c49f-affe-5227-6165de859ec2",
@@ -79,17 +80,17 @@
 			"rawModeData": "{\n\t\"first\": \"9\",\n\t\"second\": \"5\"\n}"
 		},
 		{
-			"id": "ea876295-1181-568e-b85c-fe423a09d17c",
-			"headers": "token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjEyMTc5MjM2LCJleHAiOjE2MTIxODAxMzZ9.bj1JV1ZYb0uFa7yFHG16AoKCPa_7XzT-tZPX-lNHmA4\n",
+			"id": "95855a5d-10d9-587a-887b-f95bc5dc5d56",
+			"headers": "token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjEyMTg5NTg1LCJleHAiOjE2MTIxOTA0ODV9.vwX_e7CRplXViNee1fxyEKKh9LlVuVLdhx7S9wPBACY\n",
 			"headerData": [
 				{
 					"key": "token",
-					"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjEyMTc5MjM2LCJleHAiOjE2MTIxODAxMzZ9.bj1JV1ZYb0uFa7yFHG16AoKCPa_7XzT-tZPX-lNHmA4",
+					"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjEyMTg5NTg1LCJleHAiOjE2MTIxOTA0ODV9.vwX_e7CRplXViNee1fxyEKKh9LlVuVLdhx7S9wPBACY",
 					"description": "",
 					"enabled": true
 				}
 			],
-			"url": "http://52.183.89.38/list",
+			"url": "http://52.175.219.25/user/logout",
 			"queryParams": [],
 			"preRequestScript": null,
 			"pathVariables": {},
@@ -100,7 +101,35 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1612179301095,
+			"time": 1612189621560,
+			"name": "User logout",
+			"description": "",
+			"collectionId": "34cb6b17-c49f-affe-5227-6165de859ec2",
+			"responses": []
+		},
+		{
+			"id": "ea876295-1181-568e-b85c-fe423a09d17c",
+			"headers": "token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjEyMTg5NTg1LCJleHAiOjE2MTIxOTA0ODV9.vwX_e7CRplXViNee1fxyEKKh9LlVuVLdhx7S9wPBACY\n",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjEyMTg5NTg1LCJleHAiOjE2MTIxOTA0ODV9.vwX_e7CRplXViNee1fxyEKKh9LlVuVLdhx7S9wPBACY",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://52.175.219.25/list",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1612189618564,
 			"name": "List Sums",
 			"description": "",
 			"collectionId": "34cb6b17-c49f-affe-5227-6165de859ec2",
@@ -117,7 +146,7 @@
 					"enabled": true
 				}
 			],
-			"url": "http://52.183.89.38/user/signup",
+			"url": "http://52.175.219.25/user/signup",
 			"queryParams": [],
 			"preRequestScript": null,
 			"pathVariables": {},
@@ -129,7 +158,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1612161599278,
+			"time": 1612186075652,
 			"name": "Create User",
 			"description": "",
 			"collectionId": "34cb6b17-c49f-affe-5227-6165de859ec2",
