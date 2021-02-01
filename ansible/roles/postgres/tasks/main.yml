@@ -1,0 +1,54 @@
+---
+  - copy:
+      src: ../../../pg/docker-compose.yml
+      dest: /home/{{ VM_USER_ADMIN }}/docker-compose.yml
+      owner: root
+      group: root
+      mode: 0644
+ 
+  - replace:
+      path: /home/{{ VM_USER_ADMIN }}/docker-compose.yml
+      regexp: '#{DB_USER}#'
+      replace: '{{ DB_USER }}'
+  
+  - replace:
+      path: /home/{{ VM_USER_ADMIN }}/docker-compose.yml
+      regexp: '#{DB_PASS}#'
+      replace: '{{ DB_PASS }}'
+  
+  - replace:
+      path: /home/{{ VM_USER_ADMIN }}/docker-compose.yml
+      regexp: '#{DB_NAME}#'
+      replace: '{{ DB_NAME }}'
+
+  - name: Creates directory
+    file:
+      path: /var/lib/pg
+      state: directory
+
+  - replace:
+      path: /home/{{ VM_USER_ADMIN }}/docker-compose.yml
+      regexp: '#{DB_HOST}#'
+      replace: '{{ DB_HOST }}'
+    
+  - name: Deploy PostgreSQL
+    become: True
+    shell:
+      cmd: "docker-compose up -d --force-recreate && docker-compose down"
+      chdir: /home/{{ VM_USER_ADMIN }}/
+    register: outs
+
+  - replace:
+      path: /var/lib/pg/pg_hba.conf
+      regexp: 'host all all all md5'
+      replace: 'host {{ DB_NAME }} {{ DB_USER }} {{ API_HOST }}/32 md5'
+
+  - name: Restart docker compose
+    become: True
+    shell:
+      cmd: "docker-compose up -d"
+      chdir: /home/{{ VM_USER_ADMIN }}/
+    register: outs
+
+  - debug:
+      var: outs.stdout_lines

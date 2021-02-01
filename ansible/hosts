@@ -1,0 +1,11 @@
+[pg-server]
+13.66.220.32
+
+[api-server]
+52.183.89.38
+
+[pg-server:vars]
+ansible_python_interpreter=/usr/bin/python3
+
+[api-server:vars]
+ansible_python_interpreter=/usr/bin/python3

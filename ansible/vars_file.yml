@@ -1,0 +1,9 @@
+---
+VM_USER_ADMIN: admintenpo
+API_NAME: tenpoapi
+PSQL_NAME: tenpopsql
+API_HOST: 10.0.10.10
+DB_HOST: 10.0.10.100
+DB_USER: tenpouser
+DB_PASS: tenpopass
+DB_NAME: tenpodb
