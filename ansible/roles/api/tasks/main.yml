@@ -1,43 +1,32 @@
 ---
-  - copy: 
-      src: "{{ playbook_dir }}/../api"
-      dest: /home/{{ VM_USER_ADMIN }}/
-      remote_src: yes
-      directory_mode: yes
-      owner: root
-      group: root
-      mode: 0644
-
-  # - name: Copy API
-  #   copy:
-  #     src: "{{ playbook_dir }}/../api"
-  #     dest: "/home/{{ VM_USER_ADMIN }}/"
-  #     directory_mode: yes
-  #     remote_src: yes
-
-  # - name: Copy API
-  #   command: cp -r {{ playbook_dir }}/../api /home/{{ VM_USER_ADMIN }}/
-  #   with_items:
-  #   - "index.html"
-  #   - "static/"
+  - name: Creates directory
+    file:
+      path: /home/{{ VM_USER_ADMIN }}/api
+      state: directory
+  
+  - name: Clone Repo
+    git:
+      repo: https://github.com/alegorosito/tenpo.git
+      dest: /home/{{ VM_USER_ADMIN }}/api/
+      force: yes
 
   - replace:
-      path: /home/{{ VM_USER_ADMIN }}/docker-compose.yml
+      path: /home/{{ VM_USER_ADMIN }}/api/docker-compose.yml
       regexp: '#{DB_HOST}#'
       replace: '{{ DB_HOST }}'
   
   - replace:
-      path: /home/{{ VM_USER_ADMIN }}/docker-compose.yml
+      path: /home/{{ VM_USER_ADMIN }}/api/docker-compose.yml
       regexp: '#{DB_NAME}#'
       replace: '{{ DB_NAME }}'
 
   - replace:
-      path: /home/{{ VM_USER_ADMIN }}/docker-compose.yml
+      path: /home/{{ VM_USER_ADMIN }}/api/docker-compose.yml
       regexp: '#{DB_USER}#'
       replace: '{{ DB_USER }}'
 
   - replace:
-      path: /home/{{ VM_USER_ADMIN }}/docker-compose.yml
+      path: /home/{{ VM_USER_ADMIN }}/api/docker-compose.yml
       regexp: '#{DB_PASS}#'
       replace: '{{ DB_PASS }}'
 

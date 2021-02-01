@@ -8,6 +8,7 @@
         - apt-transport-https
         - ca-certificates
         - curl
+        - git
         - software-properties-common
         - gnupg2
         - python3
