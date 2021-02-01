@@ -105,8 +105,13 @@ Datos requeridos:
 * Token de sesión
 * Primer número
 
-4) Cerrar Sesión:
-POST a */user/logout*: 
+4) Listar historial de sumas:
+Get a */list* 
+Datos requeridos:
+* Token de sesión
+
+5) Cerrar Sesión:
+GET a */user/logout*: 
 Datos requeridos:
 * Token de sesión
 
