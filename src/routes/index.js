@@ -3,7 +3,8 @@ const router = Router();
 
 const { 
     createUser,
-    loginUser
+    loginUser,
+    logoutUser
 } = require('../controllers/users');
 
 const { 
@@ -14,6 +15,7 @@ const {
 // user routes
 router.post('/user/signup', createUser);
 router.post('/user/signin', loginUser);
+router.post('/user/logout', logoutUser);
 
 // math routes
 router.post('/adding', add);

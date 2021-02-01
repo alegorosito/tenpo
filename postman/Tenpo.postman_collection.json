@@ -1,0 +1,140 @@
+{
+	"id": "34cb6b17-c49f-affe-5227-6165de859ec2",
+	"name": "Tenpo",
+	"description": "Test Tenpo",
+	"order": [
+		"fdefce96-a7dd-d16f-0fb1-1e723c6d2391",
+		"1f3101eb-1e6f-2e7a-3c99-85cfb03f7f40",
+		"58e5ba7d-3e4a-f2bb-f89c-a8c5e3752202",
+		"ea876295-1181-568e-b85c-fe423a09d17c"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1611976015313,
+	"owner": "5066269",
+	"public": false,
+	"requests": [
+		{
+			"id": "1f3101eb-1e6f-2e7a-3c99-85cfb03f7f40",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://52.183.89.38/user/signin",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1612161515956,
+			"name": "Login User",
+			"description": "",
+			"collectionId": "34cb6b17-c49f-affe-5227-6165de859ec2",
+			"responses": [],
+			"rawModeData": "{\n\t\"username\": \"alejandro\",\n\t\"password\": \"test22\"\n}"
+		},
+		{
+			"id": "58e5ba7d-3e4a-f2bb-f89c-a8c5e3752202",
+			"headers": "Content-Type: application/json\ntoken: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjEyMTYxNDU3LCJleHAiOjE2MTIxNjIzNTd9.JOfCPJWe9Ponsjr82OH9SpJKZ_nBPy5j8KHxAgrN3aY\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "token",
+					"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjEyMTYxNDU3LCJleHAiOjE2MTIxNjIzNTd9.JOfCPJWe9Ponsjr82OH9SpJKZ_nBPy5j8KHxAgrN3aY",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://52.183.89.38/adding",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1612161562128,
+			"name": "Adding 2 numbers",
+			"description": "Suma de dos números",
+			"collectionId": "34cb6b17-c49f-affe-5227-6165de859ec2",
+			"responses": [],
+			"rawModeData": "{\n\t\"first\": \"9\",\n\t\"second\": \"5\"\n}"
+		},
+		{
+			"id": "ea876295-1181-568e-b85c-fe423a09d17c",
+			"headers": "token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjEyMTc5MjM2LCJleHAiOjE2MTIxODAxMzZ9.bj1JV1ZYb0uFa7yFHG16AoKCPa_7XzT-tZPX-lNHmA4\n",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjEyMTc5MjM2LCJleHAiOjE2MTIxODAxMzZ9.bj1JV1ZYb0uFa7yFHG16AoKCPa_7XzT-tZPX-lNHmA4",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://52.183.89.38/list",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1612179301095,
+			"name": "List Sums",
+			"description": "",
+			"collectionId": "34cb6b17-c49f-affe-5227-6165de859ec2",
+			"responses": []
+		},
+		{
+			"id": "fdefce96-a7dd-d16f-0fb1-1e723c6d2391",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://52.183.89.38/user/signup",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1612161599278,
+			"name": "Create User",
+			"description": "",
+			"collectionId": "34cb6b17-c49f-affe-5227-6165de859ec2",
+			"responses": [],
+			"rawModeData": "{\n\t\"username\":\"alejandro\",\n\t\"password\":\"test22\"\n}"
+		}
+	]
+}

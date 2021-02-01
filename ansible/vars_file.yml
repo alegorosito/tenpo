@@ -1,9 +1,7 @@
 ---
-VM_USER_ADMIN: admintenpo
-API_NAME: tenpoapi
-PSQL_NAME: tenpopsql
-API_HOST: 10.0.10.10
-DB_HOST: 10.0.10.100
+VM_USER_ADMIN: admintenpo # admin user defined in tf
+API_HOST: 10.0.10.10 # API Internal nic defined in Tf
+DB_HOST: 10.0.10.100 # PSQL Internal nic defined in Tf
 DB_USER: tenpouser
 DB_PASS: tenpopass
 DB_NAME: tenpodb

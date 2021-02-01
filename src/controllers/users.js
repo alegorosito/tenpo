@@ -88,7 +88,7 @@ const loginUser = async (req, res) => {
             const values = [user.id, token];
 
             // Update user token in the DB
-            const response = await db.query('UPDATE users SET token = $2 where id = $1;', values);
+            await db.query('UPDATE users SET token = $2 where id = $1;', values);
             
             return res.header('auth-token', token).json({ user: user.username, token: token })           
 
@@ -104,7 +104,33 @@ const loginUser = async (req, res) => {
 
 };
 
+const logoutUser = async (req, res) => {
+    
+    const token = req.headers['token'];
+
+    
+    // check if token is sended
+    if ( token === undefined) return res.status(400).json("Invalid token or missing."); 
+    
+    try {
+        // validate token
+        const validtoken = jwt.verify(token, secret_token);
+        
+        const query = await db.query('UPDATE users SET token = "" where id = $1;', [validtoken.id]);
+
+        res.status(200).json({ message: "Logged out."});
+    
+    } catch (error) {
+
+        console.log(error.message + ' ' + ((error.expiredAt) ? error.expiredAt : ''));
+        return res.status(401).json((error.message == 'jwt expired' ? 'Session expired.' : error.message));
+        
+    }
+    
+};
+
 module.exports = {
     createUser,
-    loginUser
+    loginUser,
+    logoutUser
 };
