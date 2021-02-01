@@ -120,3 +120,7 @@ Datos requeridos:
 
 - Importar la colección Postman desde postman/
 - Actualizar IPs en los requests
+
+# Infraestructura Actual Desplegada
+- VM PSQL: 13.66.167.196
+- VM API: 52.175.219.25
