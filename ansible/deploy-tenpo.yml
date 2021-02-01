@@ -3,14 +3,14 @@
   vars_files:
     - vars_file.yml
   roles:
-    - install
-    - postgres
+#    - install
+#    - postgres
   become: true
 
 - hosts: api-server
   vars_files:
     - vars_file.yml
   roles:
-    - install
+#    - install
     - api
   become: true

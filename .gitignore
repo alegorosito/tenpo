@@ -139,3 +139,5 @@ tf/*_override.tf.json
 # Ignore CLI configuration files
 tf/.terraformrc
 tf/terraform.rc
+tf/.terraform.lock.hcl
+tf/*.plantf

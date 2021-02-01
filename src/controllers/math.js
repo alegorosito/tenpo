@@ -12,14 +12,16 @@ function isNumeric(str) {
 const list = async (req, res) => {
     
     const token = req.headers['token'];
-
     
     // check if token is sended
     if ( token === undefined) return res.status(400).json("Invalid token or missing."); 
-    
+
     try {
         // validate token
         const validtoken = jwt.verify(token, secret_token);
+        
+        const tokenquery = await db.query("SELECT token FROM users WHERE id = $1;", [validtoken.id]);
+        if (tokenquery.rows[0].token != token) return res.status(400).json("Session expired.");
         
         const query = await db.query('SELECT primer_num, segundo_num, users.username FROM suma INNER JOIN users ON users.id = suma.userid;');
 
@@ -40,12 +42,18 @@ const add = async (req, res) => {
 
     // check if token is sended
     if ( token === undefined) return res.status(400).json("Invalid token or missing.");  
-    
+
+    const query = await db.query("SELECT token FROM users WHERE id = $1;", [validtoken.id]);
+    if (query.rows[0].token != token) return res.status(400).json("Session expired.");
+        
     try {
         
         // validate token
         const validtoken = jwt.verify(token, secret_token);
         const { first, second } = req.body;
+
+        const tokenquery = await db.query("SELECT token FROM users WHERE id = $1;", [validtoken.id]);
+        if (tokenquery.rows[0].token != token) return res.status(400).json("Session expired.");
         
         if ( !isNumeric(first) || !isNumeric(second) ) return res.status(400).json({ message: "Invalid number/s." })
 

@@ -15,7 +15,7 @@ const {
 // user routes
 router.post('/user/signup', createUser);
 router.post('/user/signin', loginUser);
-router.post('/user/logout', logoutUser);
+router.get('/user/logout', logoutUser);
 
 // math routes
 router.post('/adding', add);

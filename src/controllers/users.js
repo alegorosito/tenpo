@@ -110,13 +110,16 @@ const logoutUser = async (req, res) => {
 
     
     // check if token is sended
-    if ( token === undefined) return res.status(400).json("Invalid token or missing."); 
-    
+    if ( token === undefined) return res.status(400).json("Invalid token or missing.");
+
     try {
         // validate token
         const validtoken = jwt.verify(token, secret_token);
         
-        const query = await db.query('UPDATE users SET token = "" where id = $1;', [validtoken.id]);
+        const tokenquery = await db.query("SELECT token FROM users WHERE id = $1;", [validtoken.id]);
+        if (tokenquery.rows[0].token != token) return res.status(400).json("Session expired.");
+        
+        const query = await db.query("UPDATE users SET token = ' ' where id = $1;", [validtoken.id]);
 
         res.status(200).json({ message: "Logged out."});
     
