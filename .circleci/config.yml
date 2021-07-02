@@ -24,4 +24,4 @@ workflows:
       - deploy_to_staging:
           filters:
             branches:
-              only: master
+              only: main
